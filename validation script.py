@@ -26,7 +26,7 @@ def driver():
 
 def test_country_validation(driver):
     # URL of the webpage
-    url = "https://notiontech.info/demo/isrrt/beta/reg-fees"
+    url = "Your Path"
     driver.get(url)
 
     # Find the dropdown element for countries
@@ -42,7 +42,7 @@ def test_country_validation(driver):
         select.select_by_visible_text(country)
 
         # Validate the selected country in the PDF
-        pdf_path = r"C:\Users\hanif\OneDrive\Desktop\country.pdf"  # Use raw string
+        pdf_path = r # Use raw string
         pdf_text = extract_text_from_pdf(pdf_path)
 
         assert country in pdf_text, f"Validation failed: {country} is not present in the dropdown and/or the PDF."
